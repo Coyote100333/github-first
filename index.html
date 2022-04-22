@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Wolf's Résumé</title>
+
+  <style type="text/css" media="all">
+    body
+      {
+        color: black;
+        background-color: white;
+        margin: 1in 0.5in 0.5in 0.5in;
+        min-width: 8.5in;
+      }
+
+    p { text-align: justify; }
+
+    h1, h2 { margin-right: auto; }
+
+    .literal-url,
+    .file-number,
+    .code
+      {
+        font-family: "Bitstream Vera Sans Mono",
+                     "Andale Mono",
+                     "Courier New",
+                      Courier,
+                      monospace;
+        font-size: 85%;
+      }
+
+    .front-matter
+      {
+        display: block;
+        position: relative;
+      }
+
+    .job .summary
+      {
+        display: block;
+        position: relative;
+      }
+
+    .job .dates
+      {
+        position: absolute;
+        left: 0em;
+        top: 0.5em;
+      }
+
+    .job .company
+      {
+        position: relative;
+        left: 2.25in;
+        font-size: 150%;
+      }
+
+    .job .company .division
+      {
+        font-size: 75%;
+        padding-left: 1.5em;
+      }
+
+    .job .title
+      {
+        position: absolute;
+        right: 0;
+        top: 0.5em;
+      }
+
+    .contact-info
+      {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+    .contact-info table
+      {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+    .contact-label
+      {
+        display: none;
+        text-align: right;
+        font-style: italic;
+        vertical-align: top;
+      }
+
+    .zip-code
+      {
+        margin-left: .8em;
+      }
+
+    .front-matter h1
+      {
+        font-size: 100%;
+        font-weight: normal;
+      }
+
+    .front-matter h1 .subject
+      {
+        display: block;
+        clear: left;
+        font-size: 250%;
+      }
+
+    .view-switch
+      {
+        font-weight: normal;
+        font-size: 90%;
+        color: gray;
+        left: -1.2em;
+      }
+
+    .summary-view .job { display: none; }
+    .summary-view ul { display: none; }
+    .summary-view p { display: none; }
+    .summary-view div.prose { display: none; }
+    .summary-view h3 { display: none; }
+
+    /* h2:hover { color: blue; } */
+
+    .detail-view h2:after { content: " - "; color: lightgray; }
+    .detail-view h2:hover:after { content: " - "; color: blue; }
+    .summary-view h2:after { content: " + "; color: lightgray; }
+    .summary-view h2:hover:after { content: " + "; color: blue; }
+
+    .hide-ie-only-content .ie-only            { display: none; }
+    .show-ie-only-content span.ie-only        { display: inline; }
+    .show-ie-only-content .summary-view .job  { display: block; }
+    .show-ie-only-content .summary-view p     { display: block; }
+    .show-ie-only-content .summary-view div.prose { display: block; }
+
+    div.document-notice
+      {
+        font-style: italic;
+        color: rgb(80, 80, 80);
+        margin: 20px;
+        padding: 8px 20px 2px 20px;
+      }
+
+    div.document-notice h1
+      {
+        font-size: 100%;
+      }
+  </style>
+
+  <style type="text/css" media="print">
+    .ie-only { display: none; }
+    .summary-view .job { display: block; }
+    .summary-view p { display: block; }
+    .detail-view h2:after { content: ""; }
+    .summary-view h2:after { content: ""; }
+  </style>
+
+  <script type="text/javascript">
+    function notice_IE()
+      {
+        if ( navigator.appVersion.indexOf('MSIE') != -1 )
+          {
+            document.body.className = 'show-ie-only-content';
+          }
+      }
+
+    function flip_expand_state( id )
+      {
+        var wrapper = document.getElementById(id);
+
+        if ( wrapper.className == 'summary-view' )
+          wrapper.className = 'detail-view';
+        else
+          wrapper.className = 'summary-view';
+      }
+  </script>
+</head>
+<body class="hide-ie-only-content">
+
+<div class="front-matter">
+<div class="document-info">
+  <span class="date">21 April 2022</span>
+  <h1>Confidential R&eacute;sum&eacute; of <span class="subject">Wolf</span></h1>
+</div>
+<div class="contact-info">
+  <table>
+    <tr>
+      <td class="contact-label">mailing label:</td>
+      <td>5936 Lohr Rd.,<br/>Ann Arbor, MI <span class="zip-code">48108</span></td>
+    </tr>
+    <tr>
+      <td class="contact-label">email:</td>
+      <td><a class="literal-url" href="mailto:wolf@zv.cx">wolf@zv.cx</a></td>
+    </tr>
+    <tr>
+      <td class="contact-label">phone:</td>
+      <td>+1 734 358-9016</td>
+    </tr>
+  </table>
+</div>
+</div>
+
+<div class="ie-only">
+<div class="document-notice">
+<h1>a note for IE users:</h1>
+<p>
+The software you're using to view or print this r&eacute;sum&eacute;
+  claims to be Microsoft Internet Explorer.
+You're probably already tired of hearing it from your friends,
+  and I am biased, of course,
+  but I recommend you give
+    <a href="http://getfirefox.com/">Firefox</a> a try.
+I wrote this document with standards-compliant browsers in mind;
+  it will look best in such a browser.
+</p>
+</div>
+</div>
+
+<div class="detail-view" id="how-i-fit-in">
+<h2 onclick="flip_expand_state('how-i-fit-in');">How I Fit In</h2>
+<p>
+A generalist with a broad background,
+        I am a top-notch software engineer, documentor, architect, implementor, debugger,
+        and an excellent resource for the rest of the team.
+My wide range of experience allows me to jump into any situation
+  and become productive immediately.
+I can travel, work on-site or remotely; join or lead a team, or work alone.
+I am also an experienced public speaker
+  with a love (and a talent) for teaching.
+</p>
+<h3>My "Why"</h3>
+<p>
+I feel purpose most in raising up the people around me by helping them,
+        teaching them,
+        and by advertising their accomplishments.
+I feel purpose in being useful in the situation and getting my job done.
+I define success as
+        the success of the team around me,
+        if I have done my job, been useful, and raised up members of the the team.
+I value integrity, kindness, honesty, usefulness, and learning (both for me and for others).
+</p>
+</div>
+
+<div class="detail-view" id="technical-skills">
+<h2 onclick="flip_expand_state('technical-skills');">Technical Skills</h2>
+<p>
+I am expert in Python,
+        my JavaScript is strong but I have not been focused on it recently,
+        and I'm an able programmer in PHP.
+Some time ago I was an expert in C++,
+        but I could probably still write code in it
+        (or almost anything else) given a little preparation and an open book.
+I have a great deal of experience with MySQL,
+        and am reasonably proficient in SQLite
+        and have experience using MongoDB.
+I am a full-stack developer,
+        well equipped to deal with both the front-end and the back-end.
+I am at home on Linux, Mac, or Windows,
+        and have been writing cross-platform code since 1991.
+I can live happily with the IDE du jour
+        or with nothing but the command line.
+I am an algorithms guy with experience in
+        web services, communication, and networking protocols;
+        encryption/authentication;
+        search;
+        compression;
+        text systems;
+        database engines;
+        build system machinery;
+        various application frameworks;
+        and making things go faster.
+</p>
+<p>
+I have distinguished myself as a public speaker,
+  technical evangelist, and educator.
+I am a receptive and persuasive communicator,
+  both face to face and in lower-bandwidth settings,
+  including technical writing and email.
+I have extensive experience in
+  Open Source and distributed development.
+</p>
+</div>
+
+
+<div class="detail-view" id="links">
+<h2 onclick="flip_expand_state('links');">Links</h2>
+<ul>
+    <li><a href="https://github.com/wolf">my GitHub page</a></li>
+    <li><a href="https://github.com/wolf/hrmulator">some of my Python</a></li>
+    <li><a href="https://github.com/wolf/typeof-js">some of my JavaScript</a></li>
+    <li><a href="https://github.com/wolf/dotfiles/blob/main/bash/.bash_topics.d/git.bash">some of my Bash scripting</a></li>
+    <li><a href="https://github.com/wolf/intset">an interesting data structure I implemented in Go</a></li>
+    <li><a href="https://github.com/wolf/git-forward">some of my Perl</a> (please don't ask for more Perl)</li>
+    <li>Some videos of presentations I've done:
+    <ul>
+    <li><a href="https://www.youtube.com/watch?v=O0ipMEjYd-Q">modern shell tools</a></li>
+    <li><a href="https://www.youtube.com/watch?v=DIGIH4eUxMU">tmux</a></li>
+    <li><a href="https://www.youtube.com/watch?v=oVS2sIlgCYk">regular expressions</a> (<a href="https://github.com/wolf/re-presentation/blob/master/%60re%60%20Presentation.ipynb">the notebook from that presentation</a>)</li>
+    <li><a href="https://www.youtube.com/watch?v=1_LFectmOTw">how Git stores objects</a></li>
+    <li><a href="https://www.youtube.com/watch?v=ZtfSm8nK1ag">Vim</a></li>
+    </ul>
+    </li>
+    <li><a href="https://stackoverflow.com/users/908269/wolf">my StackOverflow page</a></li>
+    <li><a href="https://hg.mozilla.org/mozilla-central/file/dbb1558cb40e/xpcom/base/nsCOMPtr.h">some of my C++ from Mozilla</a></li>
+</ul>
+</div>
+
+
+<div class="detail-view" id="experience">
+<h2 onclick="flip_expand_state('experience');">Recent Experience</h2>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Sep 2014 - present</span>
+    <span class="title">Principal Software Engineer</span>
+    <span class="company"><a href="http://learninga-z.com/">Learning A-Z</a></span>
+  </div>
+  <p>
+At LAZ,
+    I am a full-stack application developer building literacy tools for K-6 students.
+I work in PHP and JavaScript with deep use of MySQL.
+I am currently working on the mobile team writing back-end code,
+    and focusing on our latest writing program.
+That means I'm almost entirely PHP-focused at the moment.
+Initially,
+    I spent time doing DevOps-related tasks such as
+    researching CDNs and implementing our use of one;
+    implementing an additional code staging area (known as postprod);
+    researching, setting up, and initially managing an on-prem Git hosting facility (GitLab); and
+    converting a large code-base and equally large development team from CVS to Git.
+As the team's Git expert,
+    I do both regular training on the available tools,
+    and one-on-one problem solving with indvidual developers.
+  </p>
+  <p>
+On the non-coding side,
+    I run our annual intern program: "mentoring the mentors" and handling issues outside the scope of an individual mentor.
+I also run our twice-yearly engineering Hack-a-thon.
+  </p>
+</div>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">mid 2011 - early 2014</span>
+    <span class="title">Senior Software Engineer</span>
+    <span class="company">Arbor Networks</span>
+  </div>
+  <p>
+I worked on network analysis tools,
+    written in Python,
+    that examined and filtered the flow of IP packets across the cell network.
+Arbor Networks is now NetScout.
+  </p>
+</div>
+
+</div>
+
+<div class="summary-view" id="older-experience">
+<h2 onclick="flip_expand_state('older-experience');"
+    title="from 10 years or more in the past">Older Experience</h2>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Sep 2009 - mid 2011</span>
+    <span class="title">Senior Software Engineer</span>
+    <span class="company"><a href="http://sourceforge.net/">SourceForge.net</a></span>
+  </div>
+  <p>
+Here, I worked on a new implementaion of SourceForge.
+This implementation is written in Python atop TurboGears and Pylons.
+It uses MongoDB, RabbitMQ, and a great many Python packages.
+The client-side functionality is JavaScript relying heavily on jQuery.
+  </p>
+</div>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Aug 2006 - Sept 2009</span>
+    <span class="title">Slashdot Engineer</span>
+    <span class="company"><a href="http://slashdot.org/">Slashdot (SourceForge)</a></span>
+  </div>
+  <p>
+Slashdot is a popular technology news and discussion site.
+My job there was to implement modern web UI
+        using client-side browser facilities including JavaScript, AJAX, CSS, and the DOM
+        as well as server-side tools including Perl, the Template Toolkit, MySQL, Apache, and others.
+I've implemented web features such as
+    dynamic loading of stories,
+        drag-and-drop arrangement for Slashboxes,
+        a dual-thumb slider for setting comment viewing thresholds,
+        dynamic nod/nix menus,
+        auto-completing text entry,
+        remote `badges' to submit pages to Slashdot,
+        and more.
+  </p>
+</div>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Aug 2004 - Jan 2006</span>
+    <span class="title">Evangelist (as Scott Collins)</span>
+    <span class="company"><a href="http://www.qt.io/">Trolltech</a></span>
+  </div>
+  <p>
+Trolltech (now The Qt Company) is the maker of
+  <a href="http://www.trolltech.com/products/qt/">Qt</a>.
+As Evangelist, my primary role was to be a public speaker and educator.
+I have spoken at open conferences, including
+  FISL, LinuxWorld, SIGGRAPH, LinuxLunacy, OSDW, Microsoft PDC, ADHOC, Gnomedex, and others.
+I have also spoken at internal conferences for customer companies,
+  including Synopsys, and Roxar.
+I was on the road as much or more than I was at home.
+I wrote software built on Qt so that I could understand the problems Qt users face;
+  and continually encouraged the team to support the complete set of C++ features
+  and facilities, including compatibility with the C++ Standard Library and Boost.
+I interacted directly with the engineering team, with customers, and with Open Source users.
+I served on external standards committees to represent Trolltech's interests,
+  getting the Linux Standard Base to accept Qt as an industry standard.
+  </p>
+</div>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Jan 2003 - Aug 2004</span>
+    <span class="title">Chief Scientist</span>
+    <span class="company">Ann Arbor Digital Arts</span>
+  </div>
+  <p>
+Ann Arbor Digital Arts (A2DA) is, principally, a software research and development firm
+  which also provides contract engineering, consulting, and IT support.
+At A2DA I designed and built the web-based UI for a Department of Education Phase I
+  pilot program bringing to educators and school personnel
+   usable survey results of the substance abuse patterns and practice of their students.
+I built Palm-based medication reminder software
+  with a UI targeting older adults
+  as part of a NIH SBIR Phase I research grant,
+    no. <span class="file-number">1 R43 AG19558-01A2</span>.
+I served as software consultant on a Phase I Navy STTR research project,
+  no. <span class="file-number">N03-T004</span>,
+  proposing the development of a new heuristic (the Neighborhood Covering Heuristic, NCH)
+  for the general mixed integer problem in optimization.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">late 1999 - 2004</span>
+    <span class="title">Staff Member, Technical Evangelist (as Scott Collins)</span>
+    <span class="company"><a href="http://www.mozilla.org">mozilla.org</a></span>
+  </div>
+  <p>
+In joining mozilla.org staff,
+  in addition to my Netscape engineering tasks,
+  I also took on the tasks of driver, super-reviewer, and technical evangelist.
+In these roles, particularly the latter two,
+  I became responsible for educating engineers and potential engineers:
+  teaching them the underlying architecture of Mozilla,
+  from the big picture all the way down to
+  rules and techniques to improve their code at the lowest levels.
+As a technical evangelist,
+  I bring engineering expertise to companies and groups interested in exploiting the Mozilla code-base.
+I bring them up to speed on the code and on interacting with the community
+  to reach their goals.
+As a key player in our Mozilla University effort,
+  I have traveled to universities across the country
+  giving technical lectures to CS students and faculty
+  to bring new and bright engineering talent into the Mozilla project,
+  as well as exporting Mozilla's UI building machinery
+  to academia as a framework for use in their own research.
+My role with mozilla.org continues even beyond my association with Netscape.
+  </p>
+</div>
+
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Mar 1997 - Dec 2002</span>
+    <span class="title">Principal Software Engineer (as Scott Collins)</span>
+    <span class="company">Netscape Communications; AOL/Time Warner</span>
+  </div>
+  <p>
+I designed and implemented the bulk of
+  Mozilla's XPCOM type-safe and leak resistant object management facilities
+  (note, however, that there is a great deal more to XPCOM than just that machinery).
+I designed and implemented Mozilla's string library
+  which far surpassed its predecessor in efficiency and flexibility.
+I served terms as module owner of both XPCOM and Strings;
+  and I was a key resource for other module owners
+  in their architectural work.
+I was the original
+  architect of the XPToolkit team,
+        which produced XUL, our cross-platform, XML-based, user-interface description language,
+        and related services.
+I was also the architect for several key tools including
+        MacCVS Pro
+        and the Macintosh (classic) build system.
+  </p>
+  <p>
+In 1999, AOL bought Netscape.
+In January of 2001, AOL and Time Warner officially merged.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Jun 1996 - Mar 1997</span>
+    <span class="title">Senior Software Engineer (as Scott Collins)</span>
+    <span class="company">NetManage</span>
+  </div>
+  <p>
+I was
+        the lead engineer for the Macintosh SDK and
+        a turn-around engineer for the email client.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">May 1995 - Feb 1996</span>
+    <span class="title">Senior Software Engineer (as Scott Collins)</span>
+    <span class="company">
+      Macromedia
+      <span class="division">Video Products Group</span>
+    </span>
+  </div>
+  <p>
+I designed and implemented a user-level scripting language for compiling video effects,
+        such as transitions, within our cross-platform framework.
+I wrote the bulk of the scripts that made up our development environment.
+Macromedia sold our project to Apple Computer
+  where it is now known as Final Cut Pro.
+  </p>
+</div>
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">May 1993 - May 1995</span>
+    <span class="title">Senior Software Engineer (as Scott Collins)</span>
+    <span class="company">
+      <a href="http://www.apple.com/">Apple Computer</a>
+      <span class="division">Newton Software Group</span>
+    </span>
+  </div>
+  <p>
+I designed and implemented a persistent store (stochastic locality-optimizing)
+        with a back-end interface allowing OEMs to quickly bring up new devices.
+<span class="code">PagedTStore</span> was a 30% <strong>net</strong> speed improvement over extant code.
+I wrote import/export for the Newton Connection Kit 2.0, including a transaction-oriented database language.
+My work ran on Mac, PC, and Newton.
+  </p>
+</div>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Feb 1993 - Apr 1993</span>
+    <span class="title">Contract Software Engineer (as Scott Collins)</span>
+    <span class="company">Common Knowledge</span>
+  </div>
+  <p>
+I wrote the Grabber, a Macintosh system extension for Arrange, an outliner/idea-processor.
+The Grabber integrated Arrange data-exchange into other applications,
+  so one could cut and paste into Arrange from any running application,
+  even when Arrange wasn't, itself, running.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Aug 1991 - Feb 1993</span>
+    <span class="title">Software Engineer (as Scott Collins)</span>
+    <span class="company">
+      General Magic
+      <span class="division">OS Group</span>
+    </span>
+  </div>
+  <p>
+I designed and implemented the text system;
+        invented an efficient database compression strategy
+        (generationally-adaptive predictive encoding);
+        made significant contributions to the design of Telescript and to the MagicCAP UI;
+        built a compiler integral to the OS effort;
+        was responsible for security considerations
+                including a protocol for secure communication.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Dec 1990 - Feb 1991</span>
+    <span class="title">Contract Software Engineer (as Scott Collins)</span>
+    <span class="company">MedImage / Siemens Gamasonic</span>
+  </div>
+  <p>
+With one other engineer, I wrote the database-engine for a nuclear imaging system.
+  </p>
+</div>
+
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Aug 1989 - Aug 1990</span>
+    <span class="title">Project Lead (as Scott Collins)</span>
+    <span class="company">LucasArts</span>
+  </div>
+  <p>
+As the architect of SoundDroid, a large-scale audio post-production tool that was
+        both a UI for NED audio hardware and a database for sounds,
+        directors notes, etc.,
+I designed its internal architecture; designed and implemented a persistent object store
+        around an extent engine; and educated the team in MacApp and C++.
+  </p>
+</div>
+
+
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">early 1986 - Aug 1989</span>
+    <span class="title">Software Engineer (as Scott Collins)</span>
+    <span class="company">Ann Arbor Softworks / Ashton-Tate</span>
+  </div>
+  <p>
+I was
+        one of the principal implementors of FullWrite Professional 1.0
+        (a full-featured WYSIWYG word processor for the Macintosh) at Ann Arbor,
+        and leader of the tools group for the Mac division at Ashton-Tate after the acquisition.
+I contributed to the UI design, and much of its implementation;
+        designed and implemented the menu manager
+                and a smart (MVC) dialog manager.
+  </p>
+</div>
+</div>
+
+<div class="summary-view" id="references">
+<h2 onclick="flip_expand_state('references');">References</h2>
+<p>
+Furnished upon request.
+</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
