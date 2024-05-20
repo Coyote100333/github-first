@@ -128,12 +128,6 @@
     .summary-view h2:after { content: " + "; color: lightgray; }
     .summary-view h2:hover:after { content: " + "; color: blue; }
 
-    .hide-ie-only-content .ie-only            { display: none; }
-    .show-ie-only-content span.ie-only        { display: inline; }
-    .show-ie-only-content .summary-view .job  { display: block; }
-    .show-ie-only-content .summary-view p     { display: block; }
-    .show-ie-only-content .summary-view div.prose { display: block; }
-
     div.document-notice
       {
         font-style: italic;
@@ -149,7 +143,6 @@
   </style>
 
   <style type="text/css" media="print">
-    .ie-only { display: none; }
     .summary-view .job { display: block; }
     .summary-view p { display: block; }
     .detail-view h2:after { content: ""; }
@@ -157,14 +150,6 @@
   </style>
 
   <script type="text/javascript">
-    function notice_IE()
-      {
-        if ( navigator.appVersion.indexOf('MSIE') != -1 )
-          {
-            document.body.className = 'show-ie-only-content';
-          }
-      }
-
     function flip_expand_state( id )
       {
         var wrapper = document.getElementById(id);
@@ -176,18 +161,19 @@
       }
   </script>
 </head>
-<body class="hide-ie-only-content">
+<body>
 
 <div class="front-matter">
 <div class="document-info">
-  <span class="date">3 March 2024</span>
+  <span class="date">20 May 2024</span>
   <h1>R&eacute;sum&eacute; of <span class="subject">Wolf</span></h1>
 </div>
 <div class="contact-info">
   <table>
     <tr>
       <td class="contact-label">mailing label:</td>
-      <td>Ann Arbor, MI</td>
+      <td>3659 Lohr Rd.</td>
+      <td>Ann Arbor, MI 48108</td>
     </tr>
     <tr>
       <td class="contact-label">email:</td>
@@ -197,27 +183,11 @@
 </div>
 </div>
 
-<div class="ie-only">
-<div class="document-notice">
-<h1>a note for IE users:</h1>
-<p>
-The software you're using to view or print this r&eacute;sum&eacute;
-  claims to be Microsoft Internet Explorer.
-You're probably already tired of hearing it from your friends,
-  and I am biased, of course,
-  but I recommend you give
-    <a href="http://getfirefox.com/">Firefox</a> a try.
-I wrote this document with standards-compliant browsers in mind;
-  it will look best in such a browser.
-</p>
-</div>
-</div>
-
 <div class="detail-view" id="how-i-fit-in">
 <h2 onclick="flip_expand_state('how-i-fit-in');">How I Fit In</h2>
 <p>
 A generalist with a broad background,
-        I am a top-notch software engineer, documentor, architect, implementor, debugger,
+        I am a top-notch software engineer, documenter, architect, implementer, debugger,
         and an excellent resource for the rest of the team.
 My wide range of experience allows me to jump into any situation
   and become productive immediately.
@@ -225,7 +195,9 @@ I can travel, work on-site or remotely; join or lead a team, or work alone.
 I am also an experienced public speaker
   with a love (and a talent) for teaching.
 </p>
-<h3>My "Why"</h3>
+
+<div class="detail-view" id="my-why">
+<h2 onclick="flip_expand_state('my-why');">My Why</h2>
 <p>
 I feel purpose most in raising up the people around me by helping them,
         teaching them,
@@ -233,7 +205,7 @@ I feel purpose most in raising up the people around me by helping them,
 I feel purpose in being useful in the situation and getting my job done.
 I define success as
         the success of the team around me,
-        if I have done my job, been useful, and raised up members of the the team.
+        if I have done my job, been useful, and raised up members of the team.
 I value integrity, kindness, honesty, usefulness, and learning (both for me and for others).
 I am a life-long learner.
 </p>
@@ -242,23 +214,28 @@ I am a life-long learner.
 <div class="detail-view" id="technical-skills">
 <h2 onclick="flip_expand_state('technical-skills');">Technical Skills</h2>
 <p>
-I am expert in Python,
-        my JavaScript is strong but I have not been focused on it recently,
+I am expert in Python having used it since 1998,
+        my JavaScript/TypeScript is strong but I have not been focused on it recently,
         and I'm an able programmer in PHP.
 Some time ago I was an expert in C++,
         but I could probably still write code in it
         (or almost anything else) given a little preparation and an open book.
 I have a great deal of experience with MySQL,
-        and am reasonably proficient in SQLite
+        am reasonably proficient in SQLite,
+        have been using PostgreSQL lately,
         and have experience using MongoDB.
 I am a full-stack developer,
         well equipped to deal with both the front-end and the back-end.
 I have recently been playing with Django and I have some Flask and FastAPI under my belt.
-I did work in Angular, and I'm looking forward to working with React.
+I've done work in Angular and I'm looking forward to working with React.
 I am at home on Linux, Mac, or Windows,
         and have been writing cross-platform code since 1991.
 I can live happily with the IDE du jour
         or with nothing but the command line.
+I have been working with Cloud services,
+        mostly AWS.
+I wouldn't call myself an expert yet,
+        but I'm working on it.
 I am an algorithms guy with experience in
         web services, communication, and networking protocols;
         encryption/authentication;
@@ -285,6 +262,7 @@ I have extensive experience in
 <div class="detail-view" id="links">
 <h2 onclick="flip_expand_state('links');">Links</h2>
 <ul>
+    <li><a href="https://wolf.github.io">my complete r&eacute;sum&eacute;</a></li>
     <li><a href="https://github.com/wolf">my GitHub page</a></li>
     <li><a href="https://YesJustWolf.io">my Blog</a></li>
     <li><a href="https://github.com/wolf/hrmulator">some of my Python</a></li>
@@ -309,6 +287,18 @@ I have extensive experience in
 
 <div class="detail-view" id="experience">
 <h2 onclick="flip_expand_state('experience');">Recent Experience</h2>
+
+<div class="job">
+  <div class="summary">
+    <span class="dates">Apr 2024 - current</span>
+    <span class="title">Senior Software Engineer</span>
+    <span class="company"><a href="https://dmp-maps.com/">Dynamic Map Platform</a></span>
+  </div>
+  <p>
+At DMP I write Qt apps in Python using PostgreSQL and several AWS services.
+These apps are used internally by experts in building highly precise maps.
+  </p>
+</div>
 
 <div class="job">
   <div class="summary">
@@ -344,13 +334,13 @@ I worked on the mobile team writing back-end code,
 That means I was almost entirely PHP-focused for that work.
 Initially,
     I spent time doing DevOps-related tasks such as
-    researching CDNs and implementing our use of one;
+    researching CDNs and implementing our use of one (settling on AWS Cloudfront);
     implementing an additional code staging area (known as postprod);
     researching, setting up, and initially managing an on-prem Git hosting facility (GitLab); and
     converting a large code-base and equally large development team from CVS to Git.
 As the team's Git expert,
     I did both regular training on the available tools,
-    and one-on-one problem solving with indvidual developers.
+    and one-on-one problem solving with individual developers.
   </p>
   <p>
 On the non-coding side,
@@ -375,7 +365,6 @@ Arbor Networks is now NetScout.
 
 </div>
 
-
 <div class="summary-view" id="references">
 <h2 onclick="flip_expand_state('references');">References</h2>
 <p>
@@ -385,6 +374,7 @@ Furnished upon request.
 
 </body>
 </html>
+
 
 
 
